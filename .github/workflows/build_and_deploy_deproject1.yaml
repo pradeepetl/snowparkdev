@@ -54,9 +54,9 @@ jobs:
         run: python make_connection.py $GITHUB_WORKSPACE/DE_PROJECT_1
 
       - uses: Snowflake-Labs/snowflake-cli-action@v1
-          with:
-            cli-version: "latest"
-            default-config-file-path: "config.toml"
+        with:
+          cli-version: "latest"
+          default-config-file-path: "config.toml"
 
       - name: Make connection with snowflake
         run: snow connection add --account $SNOWFLAKE_ACCOUNT --user $SNOWFLAKE_USER --password $SNOWFLAKE_PASSWORD --warehouse $SNOWFLAKE_WAREHOUSE --database $SNOWFLAKE_DATABASE --schema $SNOWFLAKE_SCHEMA --role $SNOWFLAKE_ROLE --connection-name default
