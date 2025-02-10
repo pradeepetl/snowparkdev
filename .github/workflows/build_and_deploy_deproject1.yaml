@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - dev
+      
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
   
 env:
   SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT_DEV }}
@@ -18,8 +21,7 @@ env:
   SNOWFLAKE_CONNECTIONS_MYCONNECTION_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT_DEV }}
   SNOWFLAKE_CONNECTIONS_MYCONNECTION_USER: ${{ secrets.SNOWFLAKE_USER_DEV }}
   SNOWFLAKE_CONNECTIONS_MYCONNECTION_DATABASE: ${{ secrets.SNOWFLAKE_DATABASE_DEV }}
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  
 
 jobs:
   deploy:
